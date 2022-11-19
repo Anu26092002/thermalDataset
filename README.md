@@ -14,14 +14,14 @@ Annotators were instructed to make bounding boxes as tight as possible. Tight bo
 Annotations were created only for thermal images. The thermal and RGB camera did not have identical placement on the vehicle and therefore had different viewing geometries, so the thermal annotations do not represent the placement of objects in the RGB image.
 
 The folder structure consists of three folders, each with five subfolders. For the sampled images, a suggested training and validation set have been created via two subfolders (labeled “train” and “val”). Entire videos were assigned to either be in a suggested training or validation set. 
-•	train:   Contains 8,862 sampled images given a unique consistent identifier number (1 to 8,862)
-•	val:  Contain 1,366 sampled images given a unique consistent identifier number (8,863 to 10,228)
+- train:   Contains 8,862 sampled images given a unique consistent identifier number (1 to 8,862)
+- val:  Contain 1,366 sampled images given a unique consistent identifier number (8,863 to 10,228)
 
 Baseline accuracy for Training and Validation data was established using the RefineDetect512 neural network designed for 512 X 512 images and pre-trained on MSCOCO data (https://arxiv.org/pdf/1711.06897.pdf and https://github.com/sfzhang15/RefineDet). The base neural network was trained on 8-bit thermal images and annotations in the training folder.  Test data was not used.  A mAP IoU(0.5) of 0.587 was achieved for all categories combined for the Validation data. http://cocodataset.org/#detection-eval was used for accuracy assessment criteria. mAP scores were obtained for People (0.794), Bicycles (0.580), and Cars (0.856) categories. 
 
 The following subfolders are used in the file structure:
-•       Annotated_thermal_8_bit:  The folder contains the 8-bit thermal data processed to have the annotation boundary boxes from the annotations folder overlaid on them.
-•       thermal_8_bit   8 bit, AGC applied, .jpeg formatted images which are otherwise identical to the images in the thermal_16_bit folder.
-•	RGB:   8 bit RGB (three channel) images.   Note that 499 images in Training, 109 images in Validation.The image resolution is commonly 1600 X 1800, but some images are different resolutions, including 480 X 720, 1536 X 2048, and 1024 X 1280.
+- Annotated_thermal_8_bit:  The folder contains the 8-bit thermal data processed to have the annotation boundary boxes from the annotations folder overlaid on them.
+- thermal_8_bit   8 bit, AGC applied, .jpeg formatted images which are otherwise identical to the images in the thermal_16_bit folder.
+- RGB:   8 bit RGB (three channel) images.   Note that 499 images in Training, 109 images in Validation.The image resolution is commonly 1600 X 1800, but some images are different resolutions, including 480 X 720, 1536 X 2048, and 1024 X 1280.
 
 For all images some minimal bluring has been applied to liscence plates in order to make them illegible. In RGB some minimal bluring was also applied to faces.
