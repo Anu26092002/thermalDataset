@@ -3,11 +3,11 @@ The FLIR Thermal Starter Dataset provides an annotated thermal image and non-ann
 Thermal images were acquired with a FLIR Tau2 (13 mm f/1.0, 45-degree HFOV and 37-degree VFOV). RGB images were acquired with a FLIR BlackFly at 1280 X 512m (4-8 mm f/1.4-16 megapixel lens with the FOV set to match Tua2). Both cameras were operated in default mode. The cameras were in a single enclosure 1.9 +/-0.1 inches apart from each other.  Images were captured via USB3 video using FLIR-proprietary software.  The majority of 10,228 thermal images were sampled at a rate of two images per second (native videos were 30 frames per second of video). A minority of images that were acquired in less object-rich environments were sampled at a rate of one image per second.
      
 Human annotators labeled and put bounding boxes around ten categories of objects. The MSCOCO labelvector was used for class numbering.  
-•	Category 1:  People 
-•	Category 2:  Bicycles - bicycles and motorcycles (not consistent with coco) 
-•	Category 3:  Cars - personal vehicles and some small commercial vehicles.
-•	Category 18:  Dogs 
-•	Category 91:  Other Vehicle - large trucks, boats, and trailers. 
+- Category 1:  People
+- Category 2:  Bicycles - bicycles and motorcycles (not consistent with coco) 
+- Category 3:  Cars - personal vehicles and some small commercial vehicles.
+- Category 18:  Dogs 
+- Category 91:  Other Vehicle - large trucks, boats, and trailers. 
 
 Annotators were instructed to make bounding boxes as tight as possible. Tight bounding boxes that omitted small parts of the object, such as extremities, were favored over broader bounding boxes.  Personal accessories were not included in the bounding boxes on people. When occlusion occurred, only non-occluded parts of the object were annotated. Heads and shoulders were favored for inclusion in the bounding box over other parts of the body for people and dogs. When occlusion allowed only parts of limbs or other minor parts of an object to be visible, they were not annotated. Wheels were the important part of the Bicycles category.  Bicycle parts typically occluded by riders, such as handlebars, were not included in the bounding box. People riding the bicycle were annotated separately from the bicycle. When an object was split by an occlusion, two separate annotations were given to the two visible parts of the object.
 
